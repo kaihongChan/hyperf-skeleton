@@ -37,7 +37,8 @@
         "hyperf/service-governance": "~2.1.0",
         "hyperf/task": "^2.1",
         "hyperf/tracer": "~2.1.0",
-        "hyperf/view": "^2.1"
+        "hyperf/view": "^2.1",
+        "twig/twig": "^3.3"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",
