@@ -11,8 +11,12 @@ declare(strict_types=1);
  */
 use Hyperf\HttpServer\Router\Router;
 
-Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@index');
+Router::addRoute(['GET', 'POST', 'HEAD'], '/', [App\Controller\IndexController::class, 'index']);
 
 Router::get('/favicon.ico', function () {
     return '';
+});
+
+Router::addGroup('/admin', function () {
+    Router::addRoute('GET', '',[App\Controller\Admin\IndexController::class, 'index']);
 });

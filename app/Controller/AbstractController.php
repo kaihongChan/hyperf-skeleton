@@ -14,7 +14,9 @@ namespace App\Controller;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
+use Hyperf\View\RenderInterface;
 use Psr\Container\ContainerInterface;
+use Hyperf\Contract\SessionInterface;
 
 abstract class AbstractController
 {
@@ -35,4 +37,16 @@ abstract class AbstractController
      * @var ResponseInterface
      */
     protected $response;
+
+    /**
+     * @Inject
+     * @var RenderInterface
+     */
+    protected $render;
+
+    /**
+     * @Inject()
+     * @var SessionInterface
+     */
+    protected $session;
 }

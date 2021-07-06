@@ -11,12 +11,10 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
-use Hyperf\View\RenderInterface;
-
 class IndexController extends AbstractController
 {
-    public function index(RenderInterface $render)
+    public function index()
     {
-        return $render->render('index/index.twig', ['name' => 'Hyperf']);
+        return $this->render->render('index/index.twig', ['name' => 'Hyperf']);
     }
 }
